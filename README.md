@@ -1,5 +1,6 @@
 [ ] Install GIT
-[ ] Clone repository
+[ ] Buat github account
+[ ] Fork & clone repository
 [ ] Buat branch baru (git checkout -b nama-branch-baru)
 [ ] Set email dan password git
 [ ] Buat perubahan
