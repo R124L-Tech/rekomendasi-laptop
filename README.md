@@ -1,4 +1,4 @@
-[ ] Install GIT \n
+[ ] Install GIT
 [ ] Buat github account
 [ ] Fork & clone repository
 [ ] Buat branch baru (git checkout -b nama-branch-baru)
