@@ -4,6 +4,10 @@
   font-family: Open-sans, Calibri;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -15,6 +19,7 @@ body {
 
 .gambar-admin {
   position: fixed;
+  /* z-index: 2; */
   top: 10vh;
   left: 9%;
 }
@@ -41,43 +46,67 @@ button {
   align-items: center;
 }
 
-.chats {
-  width: 48%;
-  height: 200%;
-  padding: 10vh 32%;
-  padding-bottom: 50vh;
-}
-.chat-admin,
-.chat-customer {
-  width: 60%;
-  padding: 10px 20px;
-  border-radius: 15px;
-  box-shadow: 2px 3px 4px rgba(128, 128, 128, 0.829);
-}
-.chat-admin {
-  margin-bottom: 10px;
-  background-color: rgb(214, 214, 214);
-  color: rgb(0, 0, 0);
-  transform: translateX(-70px);
-}
-.chat-admin-mulai {
-  border-top-left-radius: 0;
-}
-.chat-admin-tambah {
-  transform: translate(-70px, -3px);
-}
-.chat-customer {
-  margin-bottom: 35px;
-  background-color: #0592a5;
-  border-top-right-radius: 0;
-  color: white;
-}
-.keterangan h2 {
-  color: rgba(146, 145, 145, 0.589);
-}
+/* CHATS */
+  /* ANIMATION */
+  @keyframes tampil {
+    from {
+      opacity: 0%;
+      transform: translate(-70px,10px);
+    }
+    to {
+      opacity: 100%;
+      transform: translate(-70px,0);
+    }
+  }
 
-.selector {
+  .background img{
+    width: 100%;
+  }
+  .background{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .chats {
+    width: 48%;
+    height: 200%;
+    padding: 10vh 32%;
+    padding-bottom: 50vh;
+  }  
+  .chat-admin,
+  .chat-customer {
+    width: 60%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 4px rgba(128, 128, 128, 0.829);
+    animation: tampil .5s ease-in;
+  }
+  .chat-admin {
+    margin-bottom: 10px;
+    background-color: rgb(214, 214, 214);
+    color: rgb(0, 0, 0);
+    transform: translateX(-70px);
+  }
+  .chat-admin-mulai {
+    border-top-left-radius: 0;
+  }
+  .chat-admin-tambah {
+    transform: translate(-70px, -3px);
+  }
+  .chat-customer {
+    margin-bottom: 35px;
+    background-color: #0592a5;
+    border-top-right-radius: 0;
+    color: white;
+  }
+/* CHATS END */
+
+.selector, a {
   border: none;
+  text-decoration: none;
   background-color: rgb(116, 0, 199);
   color: white;
   width: 60%;
@@ -85,7 +114,7 @@ button {
   font-size: 20px;
   border-radius: 10px;
 }
-.selector:hover {
+.selector:hover, a:nover {
   background-color: rgb(137, 43, 204);
 }
 

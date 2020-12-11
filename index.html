@@ -18,28 +18,31 @@
         </div>
 
         <div class="chats">
+            <div class="background">
+                <img src="img/store.jpg" alt="">
+            </div>
             <h2>
                 <!-- CHAT ADMIN -->
-                <div class="chat-admin chat-admin-mulai" id="">
+                <div class="chat-admin chat-admin-mulai">
                     Mau beli laptop, tapi bingung cara milihnya?
                 </div>
                 <div class="chat-admin chat-admin-tambah">
                     Silahkan tekan tombol mulai, kami akan dengan senang hati membantu…
                 </div>
 
-                 <!-- CHAT CUSTOMER -->
+                <!-- CHAT CUSTOMER -->
                 <div class="chat-customer" id="ch_mulai" hidden>
                     Mulai
                 </div>
 
-                 <!-- PERTANYAAN 1 (STANDARD VS PRO) -->
+                <!-- PERTANYAAN 1 (STANDARD VS PRO) -->
                 <div class="chat-admin chat-admin-mulai" id="ch_ad_p1" hidden>
                     Mau beli laptop standard (basic) atau laptop professional (spesifikasi tinggi)?
                 </div>
                 <div class="chat-customer" id="ch_user_j1" hidden>
                     <!-- jawaban pertanyaan 1  -->
                 </div>
-                
+
                 <!-- PERTANYAAN 2 (BUDGET || Khusus) -->
                 <div class="chat-admin chat-admin-mulai" id="ch_ad_p2" hidden>
                     <!-- Isi pertanyaan 2 -->
@@ -48,7 +51,7 @@
                     <!-- jawaban pertanyaan 2  -->
                 </div>
 
-                 <!-- PERTANYAAN 3 (BUDGET || Khusus) -->
+                <!-- PERTANYAAN 3 (BUDGET || Khusus) -->
                 <div class="chat-admin chat-admin-mulai" id="ch_ad_p3" hidden>
                     <!-- Isi pertanyaan 3 -->
                 </div>
@@ -56,7 +59,7 @@
                     <!-- jawaban pertanyaan 3  -->
                 </div>
 
-                 <!-- PERTANYAAN 3.2 Kecepatan untuk Pro -->
+                <!-- PERTANYAAN 3.2 Kecepatan untuk Pro -->
                 <div class="chat-admin chat-admin-mulai" id="ch_ad_p4" hidden>
                     <!-- Isi pertanyaan 3.2 -->
                 </div>
@@ -72,18 +75,15 @@
                     <!-- jawaban pertanyaan 4  -->
                 </div>
 
-                 <div class="chat-admin chat-admin-mulai" id="hs1" hidden>
-                    Laptop yang  cocok buat kamu adalah laptop dengan spesifikasi:
+                <div class="chat-admin chat-admin-mulai" id="hs1" hidden>
+                    Laptop yang cocok buat kamu adalah laptop dengan spesifikasi:
                 </div>
                 <div class="chat-admin chat-admin-tambah" id="hs2" hidden>
                     RAM : XGB <br>
                     Processor : Intel-core iX <br>
                     Memory : SSD XXXGB <br>
                     Layar : XX’ <br>
-                    Graphic card (GPU) :  AMD XXX
-                </div>
-                <div class="chat-admin chat-admin-tambah" id="hs3" hidden>
-                   Ingin Rekomendasi Lain ?
+                    Graphic card (GPU) : AMD XXX
                 </div>
 
             </h2>
@@ -97,17 +97,16 @@
             <button class="selector" id="professional" hidden>Laptop Professional</button>
 
             <!-- button pertanyaan 2 pilihan standar -->
-            <button class="selector" id="budgetdo_2" hidden>Dibawah 5 Jt</button>
-            <button class="selector" id="budget2-5" hidden>Antara 2Jt - 5Jt</button>
-            <button class="selector" id="budget_up_5" hidden>Diatas 5Jt</button>
-            
+            <button class="selector" id="budgetdo_2" hidden>Dibawah 2jt</button>
+            <button class="selector" id="budget2-5" hidden>Antara 2jt - 5jt</button>
+            <button class="selector" id="budget_up_5" hidden>Diatas 5jt</button>
+
             <!-- button pertanyaan 2 pilihan pro-->
             <button class="selector" id="pro_gaming" hidden>Gaming</button>
             <button class="selector" id="pro_programming" hidden>Programming</button>
             <button class="selector" id="pro_desainG" hidden>Desain Grafis</button>
             <button class="selector" id="pro_musicP" hidden>Music Production</button>
-
-             <!-- button pertanyaan 3 pilihan pro -->
+            <!-- button pertanyaan 3 pilihan pro -->
             <button class="selector" id="kec_1" hidden>Paling Cepat</button>
             <button class="selector" id="kec_2" hidden>Cukup Cepat</button>
             <button class="selector" id="kec_3" hidden>Standar </button>
@@ -121,20 +120,24 @@
             <button class="selector" id="lo_2" hidden>Tidak</button>
 
             <!-- liat full rekomendasi -->
-            <button class="selector" id="lfull" hidden>Rekomendasi Lain</button>
+            <button class="selector" id="lfull" hidden><a href="rekomendasi/">Lihat Rekomendasi</a></button>
 
         </div>
     </div>
-    <div class="responsive">
+
+    <!-- AKTIFKAN AGARTIDAK BISA DIAKSES VIA MOBILE -->
+    <!-- <div class="responsive">
         <h1>Berhubung tampilannya belum responsive, jadi untuk sementara hanya boleh diakses menggunakan laptop.</h1>
-    </div>
+    </div> -->
+
     <!-- input hasil nilai -->
     <input type="text" id="jp1" hidden>
-    <input type="text" id="jp2" hidden >
+    <input type="text" id="jp2" hidden>
     <input type="text" id="jp3" hidden>
     <input type="text" id="jp4" hidden>
-    <input type="text" id="jp5" hidden >
+    <input type="text" id="jp5" hidden>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script src="js/script.js"></script> <!--  memanggil script.js -->
+
 </html>
