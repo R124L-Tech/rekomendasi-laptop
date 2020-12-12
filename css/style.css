@@ -19,14 +19,85 @@ body {
 
 .gambar-admin {
   position: fixed;
-  /* z-index: 2; */
   top: 10vh;
   left: 9%;
 }
 .gambar-admin img {
+  z-index: 0;
   width: 50%;
   height: auto;
 }
+
+/* CHATS */
+  /* ANIMATION */
+  @keyframes tampil {
+    from {
+      opacity: 0%;
+      transform: translate(-70px,10px);
+    }
+    to {
+      opacity: 100%;
+      transform: translate(-70px,0);
+    }
+  }
+  @keyframes tampilCustomer {
+    from {
+      opacity: 0%;
+      transform: translate(0px,10px);
+    }
+    to {
+      opacity: 100%;
+      transform: translate(0px,0);
+    }
+  }
+
+  .background{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .background img{
+    width: 100%;
+  }
+
+  .chats {
+    width: 48%;
+    height: 200%;
+    padding: 10vh 32%;
+    padding-bottom: 50vh;
+  }  
+  .chat-admin,
+  .chat-customer {
+    width: 60%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 4px rgba(128, 128, 128, 0.829);
+  }
+  .chat-admin {
+    margin-bottom: 10px;
+    background-color: rgb(214, 214, 214);
+    color: rgb(0, 0, 0);
+    transform: translateX(-70px);
+    animation: tampil .5s ease-in;
+  }
+  .chat-admin-mulai {
+    border-top-left-radius: 0;
+  }
+  .chat-admin-tambah {
+    transform: translate(-70px, -3px);
+  }
+  .chat-customer {
+    margin-bottom: 35px;
+    background-color: #0592a5;
+    border-top-right-radius: 0;
+    color: white;
+    animation: tampilCustomer .5s ease-in;
+  }
+/* CHATS END */
+
+
 button {
   outline: none;
 }
@@ -45,65 +116,6 @@ button {
   justify-content: space-evenly;
   align-items: center;
 }
-
-/* CHATS */
-  /* ANIMATION */
-  @keyframes tampil {
-    from {
-      opacity: 0%;
-      transform: translate(-70px,10px);
-    }
-    to {
-      opacity: 100%;
-      transform: translate(-70px,0);
-    }
-  }
-
-  .background img{
-    width: 100%;
-  }
-  .background{
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .chats {
-    width: 48%;
-    height: 200%;
-    padding: 10vh 32%;
-    padding-bottom: 50vh;
-  }  
-  .chat-admin,
-  .chat-customer {
-    width: 60%;
-    padding: 10px 20px;
-    border-radius: 15px;
-    box-shadow: 2px 3px 4px rgba(128, 128, 128, 0.829);
-    animation: tampil .5s ease-in;
-  }
-  .chat-admin {
-    margin-bottom: 10px;
-    background-color: rgb(214, 214, 214);
-    color: rgb(0, 0, 0);
-    transform: translateX(-70px);
-  }
-  .chat-admin-mulai {
-    border-top-left-radius: 0;
-  }
-  .chat-admin-tambah {
-    transform: translate(-70px, -3px);
-  }
-  .chat-customer {
-    margin-bottom: 35px;
-    background-color: #0592a5;
-    border-top-right-radius: 0;
-    color: white;
-  }
-/* CHATS END */
-
 .selector, a {
   border: none;
   text-decoration: none;
@@ -116,27 +128,4 @@ button {
 }
 .selector:hover, a:nover {
   background-color: rgb(137, 43, 204);
-}
-
-.responsive {
-  display: none;
-}
-@media only screen and (max-width: 900px) {
-  body {
-    overflow-y: hidden;
-  }
-  .responsive {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 999;
-    background-color: black;
-    color: white;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    text-align: center;
-  }
 }
