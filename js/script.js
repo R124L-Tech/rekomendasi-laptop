@@ -229,7 +229,7 @@ function loP(ss) {
 
     $("#lfull").show();
     $("#hs1").show();
-    $("#hs2").text("Hello");
+    $("#hs2").text("RAM: sekian, CPU: tipe 'begini' dst.");
     $("#hs2").show();
     $("#hs3").show();
 
