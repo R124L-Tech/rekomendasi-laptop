@@ -1,3 +1,7 @@
+Demo aplikasi bisa dilihat di:
+https://r142l-tech.github.io/rekomendasi-laptop
+
+Panduan berkontribusi melalui git dan github
 - [ ] Install GIT
 - [ ] Buat github account
 - [ ] Fork & clone repository
