@@ -1,39 +1,42 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(53, 53, 53);
+body {
+  background-color: rgb(53, 53, 53);
 }
 
-.judul{
-    margin: 20px 0;
-    text-align: center;
-    font-size: xx-large;
-    font-weight: 600;
-    color: white;
+.judul {
+  font-size: xx-large;
+  margin: 20px 0;
+  text-align: center;
+  font-weight: 600;
+  color: white;
 }
 
-.card{
-    margin: 10%;
-    margin-top: 0;
-    width: 340px;
+.card {
+  width: 360px;
+  margin: 10%;
+  margin-top: 0;
 }
 
-.card-btn{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.card-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.card-body{
-    background-color: rgb(240, 240, 240);
+.card-body {
+  background-color: rgb(240, 240, 240);
 }
-.card-body h5{
-    margin-bottom: 0;
+.card-body h5 {
+  margin-bottom: 0;
 }
-.label{
-    margin-bottom: 10px;
-    color: rgb(0, 95, 0);
+.label {
+  margin-bottom: 10px;
+  color: rgb(0, 95, 0);
+}
+.btn {
+  padding: 5px;
 }
