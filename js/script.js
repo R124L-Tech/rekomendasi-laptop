@@ -151,7 +151,7 @@ function pertkec(ss) {
     $("#kec_2").hide();
     $("#kec_3").hide();
 
-    $('#ch_ad_p4').text("Apakah kamu butuh kapasitas memori yang cukup besar?");
+    $('#ch_ad_p4').text("Seberapa besar kapasitas memori yang anda butuhkan?");
     $('#ch_ad_p4').show();
     $("#ch_user_j3").text(ss);
     $("#ch_user_j3").show();
