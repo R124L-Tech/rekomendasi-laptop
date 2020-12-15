@@ -1,23 +1,22 @@
-// RULES
 pilihan = [
-    ['laptop-standar', 'laptop-professional'],                      //pro       => 2 pilihan
-    ['dibawah-4jt', 'antara-4jt-10jt', 'diatas-10jt'],              //budget    => 3 pilihan
-    ['gaming', 'programming', 'desain-grafis', 'music-production'], //khusus    => 4 pilihan
-    ['paling-cepat', 'cukup-cepat', 'standar'],                     //kecepatan => 3 pilihan
-    ['cukup-besar', 'normal'],                                      //memori    => 2 pilihan
-    ['ya', 'tidak'],                                                //portable  => 2 pilihan
+    ['laptop-standar', 'laptop-professional'],                      //'pro'
+    ['dibawah-4jt', 'antara-4jt-10jt', 'diatas-10jt'],              //'budget'
+    ['gaming', 'programming', 'desain-grafis', 'music-production'], //'khusus'
+    ['paling-cepat', 'cukup-cepat', 'standar'],                     //'kecepatan'
+    ['cukup-besar', 'normal'],                                      //'memori'
+    ['ya', 'tidak'],                                                //'portable'
 ]
 
+// BUAT SETIAP KEMUNGKINAN PASANGAN ANTAR PILIHAN BERDASARKAN RULES YANG ADA
+pilihan.forEach(e => {
+    // jika pilihan 1 = laptop standard
+    if (e[0]) {
+        
+    }
+});
+
 $(".selector").click(function () {
+    // mengambil nilai text dari selector
     let text = $(this).text().toLowerCase().replace(' ', '-');
-
-    if (text == 'mulai') {
-        return
-    }
-
-    for (e in pilihan) {
-        pilihan.e.forEach(data => {
-            console.log(data);
-        });
-    }
+    console.log(text);
 })
