@@ -1,22 +1,24 @@
-pilihan = [
-    ['laptop-standar', 'laptop-professional'],                      //'pro'
-    ['dibawah-4jt', 'antara-4jt-10jt', 'diatas-10jt'],              //'budget'
-    ['gaming', 'programming', 'desain-grafis', 'music-production'], //'khusus'
-    ['paling-cepat', 'cukup-cepat', 'standar'],                     //'kecepatan'
-    ['cukup-besar', 'normal'],                                      //'memori'
-    ['ya', 'tidak'],                                                //'portable'
-]
+import * as data from './data-rules.js'
 
-// BUAT SETIAP KEMUNGKINAN PASANGAN ANTAR PILIHAN BERDASARKAN RULES YANG ADA
-pilihan.forEach(e => {
-    // jika pilihan 1 = laptop standard
-    if (e[0]) {
-        
-    }
-});
+var pilihan = []
 
+console.log(data);
+console.log("hello");
+
+// aksi ketika tombol ditekan
 $(".selector").click(function () {
     // mengambil nilai text dari selector
-    let text = $(this).text().toLowerCase().replace(' ', '-');
-    console.log(text);
+    var text = $(this).text().toLowerCase().replace(' ', '-');
+
+    // buat pengecualian untuk tombol mulai
+    if (text == 'mulai') {
+        return
+    }
+
+    pilihan.push(text)
+    if (text == 'ya' || text == 'tidak') {
+        console.log(pilihan);
+    }
+
 })
+
