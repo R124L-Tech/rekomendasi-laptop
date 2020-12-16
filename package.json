@@ -1,0 +1,19 @@
+{
+  "name": "rekomendasi-laptop",
+  "version": "1.0.0",
+  "description": "Code link on github:\r https://github.com/R124L-Tech/rekomendasi-laptop",
+  "main": "js/rules.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R124L-Tech/rekomendasi-laptop.git"
+  },
+  "author": "RIZAL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R124L-Tech/rekomendasi-laptop/issues"
+  },
+  "homepage": "https://github.com/R124L-Tech/rekomendasi-laptop#readme"
+}
