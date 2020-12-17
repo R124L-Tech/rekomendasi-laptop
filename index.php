@@ -118,7 +118,10 @@
             <button class="selector" id="lo_2" hidden>Tidak</button>
 
             <!-- liat full rekomendasi -->
-            <button class="selector" id="lfull" hidden><a href="rekomendasi/">Rekomendasi</a></button>
+            <form action="./rekomendasi/index.php" method="post">
+                <input type="text" name="namaLaptop" id="namaLaptop" hidden>
+                <button type="submit" class="selector rekomendasi" id="lfull" hidden>Rekomendasi</button>
+            </form>
         </div>
     </div>
 

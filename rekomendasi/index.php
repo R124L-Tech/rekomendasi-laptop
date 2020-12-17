@@ -19,7 +19,12 @@
 
 <body>
     <div class="judul">
-        Contoh Laptop yang sesuai dengan kebutuhan kamu:
+        Contoh Laptop yang sesuai dengan kebutuhan kamu:<br>
+
+        <!-- ini nama-nama laptop dari index root tipe string -->
+        <!-- Contoh data: ASUS ZenBook 15 UX533FTC,ASUS ZenBook 15 UX533FD,ASUS ZenBook 15 UX533FTC, -->
+        <!-- kalau perlu dibuat dalam bentuk array bisa langsung d split sja -->
+        <?= $_POST["namaLaptop"] ?>
     </div>
 
     <div class="container">

@@ -35,8 +35,13 @@ $(".selector").click(function () {
             i %= 9
         }
         let spesifikasi = rekomendasi[i]
+        let namaLaptop = ''
         let text = `RAM: ${spesifikasi[0]}, CPU: ${spesifikasi[1]}, Memori: ${spesifikasi[2]} dan Ukuran Layar: ${spesifikasi[3]}.`
+        spesifikasi[4].forEach(e => {
+            namaLaptop += e + ','
+        });
         $("#hs2").text(text);
+        document.getElementById('namaLaptop').value = namaLaptop
     }
 
 })
