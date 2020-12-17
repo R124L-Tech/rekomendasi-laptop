@@ -208,7 +208,6 @@ $("#lo_2").click(function () {
 });
 
 function loP(ss) {
-
     $('#ch_ad_p5').text("Laptopnya akan sering dibawa pindah-pindah tempat?");
     $('#ch_ad_p5').show();
 
@@ -226,13 +225,10 @@ function loP(ss) {
     $("#lo_1").hide();
     $("#lo_2").hide();
 
-
     $("#lfull").show();
     $("#hs1").show();
-    $("#hs2").text("RAM: sekian, CPU: tipe 'begini' dst.");
     $("#hs2").show();
     $("#hs3").show();
-
 }
 
 // SCROLLING

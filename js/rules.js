@@ -28,10 +28,20 @@ $(".selector").click(function () {
                 break
             }
             kodePilihan += opsi[i].indexOf(pilihan[j])
-            console.log(pilihan[j]);
+            console.log(pilihan[j])
+            console.log(kodePilihan)
             j++
         }
-        console.log(kodePilihan);
+        let i = rules.indexOf(kodePilihan)
+        if (i > 9) {
+            i %= 9
+            console.log(i);
+        }
+        let spesifikasi = rekomendasi[i]
+        let text = `RAM: ${spesifikasi[0]}, CPU: ${spesifikasi[1]}, Memori: ${spesifikasi[2]} dan Ukuran Layar: ${spesifikasi[3]}.`
+        $("#hs2").text(text);
+
+        console.log(i);
     }
 
 })
