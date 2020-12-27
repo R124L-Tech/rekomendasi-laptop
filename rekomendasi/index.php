@@ -32,7 +32,12 @@
             return $hasil_rupiah;
         }
 
-        $link = mysqli_connect("LOCALHOST", "root", "", "rekomendasi_laptop");
+        // DB LOCAL
+        // $link = mysqli_connect("localhost", "root", "", "rek_laptop");
+
+        // DB HOSTINGER
+        $link = mysqli_connect("localhost", "u288944321_rek_laptop", "yY1cxgHNeN;3", "u288944321_rek_laptop");
+
         $nmlp = explode(",", $_POST["namaLaptop"]);
 
         $sql = "SELECT * FROM data_laptop WHERE ";
