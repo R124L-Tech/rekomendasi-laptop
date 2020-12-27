@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <title>Request Laptop</title>
+    <title>Rekomendasi Laptop</title>
 </head>
 
 <body>
