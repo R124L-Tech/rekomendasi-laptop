@@ -8,8 +8,7 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/rekomendasi.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -24,77 +23,63 @@
         <!-- ini nama-nama laptop dari index root tipe string -->
         <!-- Contoh data: ASUS ZenBook 15 UX533FTC,ASUS ZenBook 15 UX533FD,ASUS ZenBook 15 UX533FTC, -->
         <!-- kalau perlu dibuat dalam bentuk array bisa langsung d split sja -->
-        <?= $_POST["namaLaptop"] ?>
+        <?php
+        //mysql
+
+        function rp($angka)
+        {
+            $hasil_rupiah = "Rp " . number_format($angka, 2, ',', '.');
+            return $hasil_rupiah;
+        }
+
+        $link = mysqli_connect("LOCALHOST", "root", "", "rekomendasi_laptop");
+        $nmlp = explode(",", $_POST["namaLaptop"]);
+
+        $sql = "SELECT * FROM data_laptop WHERE ";
+        for ($i = 0; $i < count($nmlp) - 1; $i++) {
+            $sql .= " `title`='$nmlp[$i]'";
+            if ($i != count($nmlp) - 2) {
+                $sql .= " OR";
+            }
+        }
+        $i;
+        $query = mysqli_query($link, $sql);
+        ?>
     </div>
 
     <div class="container">
         <div class="row">
 
             <!-- ITERASI KONTEN DISINI -->
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="../img/data-laptop/Aspire 3 Slim (A314-22).png" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Aspire 3 Slim (A314-22)</h5>
-                        <div class="label">Laptop standard</div>
-                        <p class="card-text">
-                            Meskipun dengan penyimpanan yang terbilang kecil (256GB), ASUS VivoBook 14 K413FQ termasuk
-                            laptop yang cepat dengan memori SSD yang juga membuat laptop ini sangat cocok untuk yang
-                            sering bepergian dikarenakan goncangan saat laptop dalam keadaan 'on' juga sudah bukan
-                            masalah. Ditambah lagi ukuran layar standard yang membuatnya pas diselip di tas ransel.
-                        </p>
-                        <div class="card-btn">
-                            <a href="#" class="btn btn-primary">Spesifikasi</a>
-                            <a href="https://www.asus.com/id/Laptops/ASUS-VivoBook-14-K413FQ/"
-                                class="btn btn-success">Beli online</a>
+            <?php while ($row = mysqli_fetch_array($query)) { ?>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="../img/data-laptop/<?= $row['gambar'] ?>" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $row['title'] ?></h5>
+                            <div class="label"><?= $_POST['jp1'] ?></div>
+                            <p class="card-text">
+                                <?= $row['keterangan'] ?>
+                                <div style="display: none;" id="c<?= $i ?>">
+                                    <!-- Tingaal buat css untuk percantik tampilannya -->
+                                    Ram : <?= $row['ram'] ?> <br>
+                                    Merk : <?= $row['merk'] ?> <br>
+                                    Kapasistas : <?= $row['kapasitas_penyimpanan'] . ' ' . $row['tipe_memory'] ?> <br>
+                                    Harga : <?= rp($row['harga']) ?> <br>
+                                    Processor : <?= $row['processor'] ?> <br>
+                                    Ukuran Layar : <?= $row['ukuran_layar'] ?> <br>
+                                </div>
+                            </p>
+                            <div class="card-btn">
+                                <button class="btn btn-primary" onclick=" document.getElementById('c<?= $i ?>').style.display = (document.getElementById('c<?= $i ?>').style.display == 'none') ? 'block' : 'none';" id="s<?= $i ?>">Spesifikasi</button>
+                                <a href="<?= $row['link'] ?>" class="btn btn-success">Beli online</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php $i++;
+            } ?>
             <!-- END ITERASI -->
-
-            <!-- CONTOH KONTEN (BISA DIHAPUS) -->
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="../img/data-laptop/ASUS Laptop E203MAH.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">ASUS Laptop E203MAH</h5>
-                        <div class="label">Laptop standard</div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, amet aliquam facere corporis
-                            minima animi molestias mollitia! Animi ab unde debitis ullam perspiciatis possimus harum sit
-                            sunt quae, iure sed est dolore voluptatem officiis omnis iste, aspernatur, ut nobis. Nemo ea
-                            ducimus quibusdam quo non.
-                        </p>
-                        <div class="card-btn">
-                            <a href="#" class="btn btn-primary">Spesifikasi</a>
-                            <a href="#" class="btn btn-success">Beli online</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="card">
-                    <img src="../img/data-laptop/IdeaPad Slim 5i (14) Intel.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">IdeaPad Slim 5i (14) Intel</h5>
-                        <div class="label">Laptop standard</div>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores suscipit consequatur
-                            maxime assumenda aliquid ipsum, veniam saepe officia, exercitationem, rem numquam?
-                            Dignissimos, ipsum delectus esse reiciendis quo quae nisi nihil eaque mollitia quis
-                            asperiores facilis at rem unde doloribus alias iusto possimus animi eligendi iste quia
-                            laudantium nostrum quas temporibus?
-                        </p>
-                        <div class="card-btn">
-                            <a href="#" class="btn btn-primary">Spesifikasi</a>
-                            <a href="#" class="btn btn-success">Beli online</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END CONTOH KONTEN -->
 
         </div>
     </div>
