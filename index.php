@@ -118,16 +118,20 @@
             <button class="selector" id="lo_2" hidden>Tidak</button>
 
             <!-- liat full rekomendasi -->
-            <button class="selector" id="lfull" hidden><a href="rekomendasi/">Rekomendasi</a></button>
+            <form action="./rekomendasi/index.php" method="post">
+                <input type="text" name="namaLaptop" id="namaLaptop" hidden>
+                <input type="text" id="jp1" name="jp1" hidden>
+                <input type="text" id="jp2" name="jp2" hidden>
+                <input type="text" id="jp3" name="jp3" hidden>
+                <input type="text" id="jp4" name="jp4" hidden>
+                <input type="text" id="jp5" name="jp5" hidden>
+                <button type="submit" class="selector rekomendasi" id="lfull" hidden>Rekomendasi</button>
+            </form>
         </div>
     </div>
 
     <!-- input hasil nilai -->
-    <input type="text" id="jp1" hidden>
-    <input type="text" id="jp2" hidden>
-    <input type="text" id="jp3" hidden>
-    <input type="text" id="jp4" hidden>
-    <input type="text" id="jp5" hidden>
+
 </body>
 
 <script src="https://code.jquery.com
