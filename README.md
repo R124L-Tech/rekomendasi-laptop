@@ -2,7 +2,7 @@ Code link on github:
 https://github.com/R124L-Tech/rekomendasi-laptop
 
 Demo aplikasi bisa dilihat di:
-https://r142l-tech.github.io/rekomendasi-laptop
+http://projects.rizaliswandy.tech/rekomendasi-laptop
 
 Panduan berkontribusi melalui git dan github
 - [ ] Install GIT
